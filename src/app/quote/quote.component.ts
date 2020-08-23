@@ -9,9 +9,10 @@ import { Qoute } from '../qoute'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Qoute(1, 'Nelson Mandela', 'There is no passion to be found playing small - in settling for a life that is less than the one you are capable of living.', 'admin', new Date(1990, 5, 10)),
-    new Qoute(2, 'Mohandas Gandhi', 'Strength does not come from physical capacity. It comes from an indomitable will.', 'admin', new Date(1950, 3, 23)),
-    new Qoute(3, 'Rick Flores', 'We have to come for them before they come for us, it is that simple', 'admin', new Date(2012, 8, 17)),
+    new Qoute(1, 'Nelson Mandela', 'There is no passion to be found playing small - in settling for a life that is less than the one you are capable of living.', 'admin', new Date(2020, 8, 23)),
+    new Qoute(2, 'Mohandas Gandhi', 'Strength does not come from physical capacity. It comes from an indomitable will.', 'admin', new Date(2020, 3, 23)),
+    new Qoute(3, 'Rick Flores', 'We have to come for them before they come for us, it is that simple', 'admin', new Date(2020, 8, 23)),
+    new Qoute(3, 'Winston Churchills', 'Success is not final, failure is not fatal: it is the courage to continue that counts.', 'admin', new Date(2020, 8, 23)),
 
   ]
 
