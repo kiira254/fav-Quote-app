@@ -3,6 +3,7 @@
     text-align: center;
     background-image: url(https://www.developgoodhabits.com/wp-content/uploads/2019/07/wise-quotes-about-love-life.jpg);
     background-size: cover;
+    padding-bottom: 300px;
     margin-bottom: 0;
     font-size: 50px;
   
@@ -23,6 +24,7 @@
     font: 1em sans-serif;
     color: rgb(153, 59, 15);
     font-weight: 36%;
+    font-size: x-large;
 
   }
   
@@ -73,7 +75,7 @@
   }
   
   
-  /* #thee {
+   #thee {
     margin-left: 61px;
-    margin-right: 0px */
-  
+    margin-right: 0px ;
+   }

@@ -1,8 +1,12 @@
 #name {
-  color: #000;
+  color:brown;
+  font-size:larger;
     }
     
     .btn {
       font-variant: small-caps;
+    }
+    .form{
+        background-color: burlywood;
     }
     
