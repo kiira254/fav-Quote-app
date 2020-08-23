@@ -1,11 +1,18 @@
 .jumbotron {
     align-content: center;
     text-align: center;
-    background-image: url(https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg);
-    
+    background-image: url(https://www.developgoodhabits.com/wp-content/uploads/2019/07/wise-quotes-about-love-life.jpg);
+    background-size: cover;
     margin-bottom: 0;
     font-size: 50px;
   
+  }
+  #thee{
+      background-image: url(https://i0.wp.com/myblog.ottawaarts.com/wp-content/uploads/2010/05/DRA-042010-LeatheryTexture-MBFT1.jpg?fit=2750%2C1833);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   
   #two {
@@ -64,6 +71,7 @@
     font-variant: small-caps;
     font-size: 13px;
   }
+  
   
   /* #thee {
     margin-left: 61px;
