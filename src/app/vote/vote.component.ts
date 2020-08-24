@@ -1,4 +1,4 @@
-import { Component, OnInit , Output, EventEmitter} from '@angular/core';
+import { Component, OnInit , Input,Output, EventEmitter} from '@angular/core';
 import {Qoute} from '../qoute'
 
 @Component({
@@ -10,20 +10,35 @@ export class VoteComponent implements OnInit {
 
   @Output() isComplete = new EventEmitter<boolean>();//listens to button click to display results
 //starting point for votes in two variables with 0 as default
-    uvotes = 0;
-    dvotes = 0;
+@Input() userId;
+@Input() itemId;
 
-    upVote(){
-      this.uvotes = this.uvotes + 1;//adds one on mouse click
-    }
+voteCount: number = 0;
+userVote: number = 0;
 
-    downVote(){
-      this.dvotes = this.dvotes + 1;//adds one per mouse click
-    }
+subscription;
 
-  constructor() { }
+constructor(private upvoteService: UpvoteService) { }
 
-  ngOnInit() {
-  }
+ngOnInit() {
+  this.subscription = this.upvoteService.getItemVotes(this.itemId)
+                    .subscribe(upvotes => {
+                      if (this.userId) this.userVote = upvotes[this.userId]
+                      this.voteCount = sum(values(upvotes))
+                    })
+}
 
+upvote() {
+  let vote = this.userVote == 1 ? 0 : 1
+  this.upvoteService.updateUserVote(this.itemId, this.userId, vote)
+}
+
+downvote() {
+  let vote = this.userVote == -1 ? 0 : -1
+  this.upvoteService.updateUserVote(this.itemId, this.userId, vote)
+}
+
+ngOnDestroy() {
+  this.subscription.unsubscribe()
+}
 }
